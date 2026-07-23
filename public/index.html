@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="简洁高效的上网导航与搜索入口">
+  <meta name="theme-color" content="#f6f7f9">
+  <title>上网导航</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="上网导航首页"><span class="brand-mark">C</span><span>上网导航</span></a>
+    <nav id="categoryNav" class="category-nav" aria-label="分类导航"></nav>
+    <div class="actions">
+      <button id="themeBtn" class="icon-btn" title="切换主题" aria-label="切换主题">◐</button>
+      <button id="manageBtn" class="command-btn">管理</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-inner">
+        <p id="dateText" class="date"></p>
+        <h1>上网，从这里开始</h1>
+        <p class="motto">爱人者，人恒爱之。敬人者，人恒敬之</p>
+        <form id="searchForm" class="search-box">
+          <select id="engine" aria-label="搜索引擎">
+            <option value="https://www.bing.com/search?q=">Bing</option>
+            <option value="https://www.google.com/search?q=">Google</option>
+            <option value="https://search.bilibili.com/all?keyword=">哔哩哔哩</option>
+            <option value="https://github.com/search?q=">GitHub</option>
+          </select>
+          <input id="searchInput" type="search" placeholder="搜索一下" autocomplete="off" required>
+          <button type="submit" class="search-btn" aria-label="搜索">⌕</button>
+        </form>
+      </div>
+    </section>
+    <section class="content"><div id="groups" class="groups"></div></section>
+  </main>
+
+  <dialog id="loginDialog">
+    <form id="loginForm" class="dialog-form">
+      <div class="dialog-head"><h2>管理登录</h2><button type="button" class="icon-btn close-dialog" aria-label="关闭">×</button></div>
+      <label>管理密码<input id="password" type="password" autocomplete="current-password" required></label>
+      <p id="loginError" class="error"></p>
+      <button class="primary" type="submit">登录</button>
+    </form>
+  </dialog>
+
+  <dialog id="editorDialog">
+    <form id="editorForm" class="dialog-form wide">
+      <div class="dialog-head"><h2 id="editorTitle">编辑书签</h2><button type="button" class="icon-btn close-dialog" aria-label="关闭">×</button></div>
+      <input id="editCategory" type="hidden"><input id="editIndex" type="hidden">
+      <label>名称<input id="editName" required maxlength="40"></label>
+      <label>网址<input id="editUrl" type="url" required></label>
+      <label>描述<input id="editDescription" maxlength="100"></label>
+      <div class="dialog-actions"><button type="button" id="deleteLink" class="danger">删除</button><button type="submit" class="primary">保存</button></div>
+    </form>
+  </dialog>
+
+  <template id="adminBarTemplate"><div class="admin-bar"><strong>管理模式</strong><span>点击书签可编辑，使用箭头调整顺序</span><button id="addCategory">＋ 分类</button><button id="saveData" class="primary">保存更改</button><button id="exitAdmin">退出</button></div></template>
+  <script src="/app.js" defer></script>
+</body>
+</html>
