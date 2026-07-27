@@ -2,14 +2,14 @@ name = "c0c-navigation"
 main = "src/index.js"
 compatibility_date = "2026-07-23"
 
+routes = [
+  { pattern = "ce11.c0c.cc", custom_domain = true }
+]
+
 [assets]
 directory = "./public"
 binding = "ASSETS"
 
 [[kv_namespaces]]
 binding = "NAV_DATA"
-id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
-
-# Configure secrets before deployment:
-#   wrangler secret put ADMIN_PASSWORD
-#   wrangler secret put SESSION_SECRET
+id = "d84bfb5eef8849d29c2dfce6253440a8"
