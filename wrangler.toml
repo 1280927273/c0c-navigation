@@ -2,7 +2,7 @@ name = "c0c-navigation"
 main = "src/index.js"
 compatibility_date = "2026-07-23"
 routes = [
-  { pattern = "ce11.c0c.cc", custom_domain = true }
+  { pattern = "c.c0c.cc", custom_domain = true }
 ]
 
 [assets]
