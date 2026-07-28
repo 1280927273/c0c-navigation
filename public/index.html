@@ -6,9 +6,9 @@
   <meta name="description" content="简洁高效的上网导航与搜索入口">
   <meta name="theme-color" content="#f6f7f9">
   <title>上网导航</title>
-  <link rel="stylesheet" href="/style.css?v=20260728-2">
-  <link rel="stylesheet" href="/search.css?v=20260728-2">
-  <link rel="stylesheet" href="/c0c-theme.css?v=20260728-2">
+  <link rel="stylesheet" href="/style.css?v=20260728-4">
+  <link rel="stylesheet" href="/search.css?v=20260728-4">
+  <link rel="stylesheet" href="/c0c-theme.css?v=20260728-4">
 </head>
 <body>
   <header class="topbar">
@@ -64,6 +64,7 @@
       <label>名称<input id="engineName" required maxlength="20" placeholder="例如：百度"></label>
       <label>搜索地址<input id="engineUrl" type="url" required placeholder="https://www.baidu.com/s?wd="></label>
       <label>输入框提示<input id="enginePlaceholder" maxlength="40" placeholder="例如：百度一下"></label>
+      <label>自定义图标<input id="engineIcon" type="url" placeholder="可选，填写图片 URL"></label>
       <p class="field-help">搜索词会自动追加到搜索地址末尾。</p>
       <button class="primary" type="submit">添加</button>
     </form>
@@ -78,6 +79,6 @@
   </div>
 
   <template id="adminBarTemplate"><div class="admin-bar"><strong>管理模式</strong><span>点击书签可编辑，使用箭头调整顺序</span><a id="addCategory" href="#categoryModal">＋ 分类</a><button id="saveData" class="primary" type="button">保存更改</button><button id="exitAdmin" type="button">退出</button></div></template>
-  <script src="/app.js?v=20260728-2" defer></script>
+  <script src="/app.js?v=20260728-4" defer></script>
 </body>
 </html>

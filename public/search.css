@@ -52,7 +52,7 @@
 }
 
 .engine.active { font-weight: 600; }
-.engine-logo { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 5px; color: #fff; font-size: 11px; font-weight: 700; }
+.engine-logo { width: 20px; height: 20px; flex: 0 0 auto; padding: 2px; border: 1px solid rgba(220,225,228,.9); border-radius: 5px; background: #fff; object-fit: contain; }
 .bing { background: #1683d8; }
 .google { background: #4285f4; }
 .bili { background: #00aeec; }
