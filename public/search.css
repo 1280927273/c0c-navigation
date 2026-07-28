@@ -15,6 +15,7 @@
 }
 
 .engine-list::-webkit-scrollbar { display: none; }
+.engine-list.is-overflowing { justify-content: flex-start; }
 
 .engine-wrap { position: relative; display: inline-flex; flex: 0 0 auto; }
 .admin-mode .engine-wrap { padding: 0 9px 23px 0; }
