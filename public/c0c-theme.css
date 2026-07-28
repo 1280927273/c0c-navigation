@@ -83,7 +83,9 @@ body {
 .admin-bar { top: 0; z-index: 100; background: rgba(255, 255, 255, .96); color: #365c4a; box-shadow: 0 4px 14px rgba(0, 0, 0, .08); }
 .admin-bar > a { border: 1px solid var(--line); background: var(--card); color: inherit; border-radius: 7px; padding: 7px 11px; text-decoration: none; }
 dialog { border-radius: 8px; }
+dialog.dialog-fallback { display: block; position: fixed; top: 50%; left: 50%; margin: 0; transform: translate(-50%, -50%); }
 .category-modal { display: none; position: fixed; inset: 0; z-index: 10000; place-items: center; padding: 16px; background: rgba(20, 32, 26, .42); backdrop-filter: blur(3px); }
+.category-modal { -webkit-backdrop-filter: blur(3px); }
 .category-modal:target { display: grid; }
 .category-modal .dialog-form { width: min(420px, 100%); border-radius: 8px; background: var(--card); color: var(--text); box-shadow: 0 22px 70px rgba(0, 0, 0, .28); }
 .modal-close { display: grid; place-items: center; text-decoration: none; }
