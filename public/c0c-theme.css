@@ -45,7 +45,7 @@ body {
   background: linear-gradient(180deg, rgba(12, 28, 39, .13) 0%, rgba(12, 28, 39, .05) 48%, rgba(244, 248, 251, .66) 84%, #f4f8fb 100%);
 }
 
-.hero-inner { position: relative; z-index: 1; width: 100%; }
+.hero-inner { position: relative; z-index: 1; width: 100%; min-width: 0; max-width: 100%; }
 .date { color: rgba(255, 255, 255, .9); text-shadow: 0 1px 5px rgba(0, 0, 0, .5); }
 .hero h1 { color: #fff; font-size: 36px; font-weight: 600; text-shadow: 1px 1px 8px #504b4b; }
 .motto { color: #fff; font-size: 12px; font-weight: 500; text-shadow: 0 1px 5px rgba(0, 0, 0, .55); }
@@ -95,13 +95,48 @@ body.dark .card:hover { background: #2a3137; }
 body.dark .favicon { border-color: #394149; }
 
 @media (max-width: 700px) {
-  .topbar { height: 58px; }
-  .hero { min-height: 430px; padding: 82px 14px 100px; }
-  .hero h1 { font-size: 28px; }
+  .topbar { height: 58px; padding-inline: 14px; }
+  .brand span:last-child { display: inline; font-size: 14px; }
+  .topbar .icon-btn, .topbar .command-btn { min-width: 42px; min-height: 38px; padding: 7px 10px; }
+  .hero { min-height: 430px; padding: 82px 12px 100px; overflow: hidden; }
+  .hero h1 { font-size: 28px; white-space: nowrap; }
+  .motto { min-height: 18px; margin: 11px 8px 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .search-box { height: 50px; }
+  .search-panel, .engine-list { min-width: 0; max-width: 100%; width: 100%; }
+  .search-box input { padding-inline: 15px; font-size: 14px; }
+  .search-btn { width: 56px; }
   .content { margin-top: -58px; padding-inline: 10px; }
   .group { padding: 12px 8px 14px; border-radius: 8px; }
+  .group h2 { padding-inline: 8px; }
   .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .card { min-width: 0; min-height: 81px; padding: 8px 2px; }
   .favicon { width: 34px; height: 34px; padding: 5px; border-radius: 7px; }
   .card strong { margin-top: 5px; font-size: 12px; }
+
+  .admin-bar { position: sticky; min-height: 82px; padding: 9px 12px; gap: 7px; }
+  .admin-bar strong { font-size: 14px; }
+  .admin-bar > button, .admin-bar > a { min-height: 36px; padding: 8px 10px; white-space: nowrap; }
+  .admin-bar span { order: 3; flex: 0 0 100%; line-height: 1.35; }
+  .admin-mode .topbar { display: none; }
+  .admin-mode .hero { min-height: 600px; padding-top: 62px; }
+  .admin-mode .engine-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0 0 12px; padding: 10px; overflow: visible; border-radius: 8px; background: rgba(255, 255, 255, .9); }
+  .admin-mode .engine-wrap { width: 100%; min-width: 0; padding: 0 18px 24px 0; }
+  .admin-mode .engine { width: 100%; min-width: 0; justify-content: flex-start; padding: 7px; color: #4f5960; text-shadow: none; overflow: hidden; }
+  .admin-mode .engine-logo { flex: 0 0 auto; }
+  .admin-mode .engine-admin-tools { bottom: 0; }
+  .admin-mode .remove-engine { top: -5px; right: -1px; }
+  .admin-mode .add-engine { grid-column: 1 / -1; min-height: 38px; background: rgba(255, 255, 255, .75); }
+  .admin-mode .content { margin-top: -58px; }
+  .admin-mode .group h2 { height: auto; min-height: 35px; flex-wrap: wrap; }
+  .admin-mode .category-sort { margin-left: auto; }
+  .admin-mode .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .admin-mode .card { min-height: 112px; }
+  .category-modal { align-items: center; padding: 14px; }
+}
+
+@media (max-width: 370px) {
+  .hero h1 { font-size: 25px; }
+  .engine { padding-inline: 8px; }
+  .admin-bar { align-items: center; }
+  .admin-bar > button, .admin-bar > a { padding-inline: 8px; font-size: 12px; }
 }
