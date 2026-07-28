@@ -49,6 +49,7 @@ body {
 .date { color: rgba(255, 255, 255, .9); text-shadow: 0 1px 5px rgba(0, 0, 0, .5); }
 .hero h1 { color: #fff; font-size: 36px; font-weight: 600; text-shadow: 1px 1px 8px #504b4b; }
 .motto { color: #fff; font-size: 12px; font-weight: 500; text-shadow: 0 1px 5px rgba(0, 0, 0, .55); }
+.hitokoto-source { display: block; margin-top: 3px; font-size: 11px; font-weight: 400; opacity: .88; }
 .search-panel { width: min(100%, 720px); }
 .engine-list { margin-bottom: 10px; }
 .engine { color: rgba(255, 255, 255, .88); text-shadow: 0 1px 4px rgba(0, 0, 0, .4); }
@@ -100,7 +101,7 @@ body.dark .favicon { border-color: #394149; }
   .topbar .icon-btn, .topbar .command-btn { min-width: 42px; min-height: 38px; padding: 7px 10px; }
   .hero { min-height: 430px; padding: 82px 12px 100px; overflow: hidden; }
   .hero h1 { font-size: 28px; white-space: nowrap; }
-  .motto { min-height: 18px; margin: 11px 8px 24px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .motto { min-height: 18px; max-width: 320px; margin: 11px auto 24px; padding-inline: 8px; line-height: 1.7; white-space: normal; overflow: visible; overflow-wrap: anywhere; }
   .search-box { height: 50px; }
   .search-panel, .engine-list { min-width: 0; max-width: 100%; width: 100%; }
   .search-box input { padding-inline: 15px; font-size: 14px; }
