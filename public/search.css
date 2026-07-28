@@ -18,13 +18,14 @@
 
 .engine-wrap { position: relative; display: inline-flex; flex: 0 0 auto; }
 .admin-mode .engine-wrap { padding: 0 9px 23px 0; }
-.remove-engine { position: absolute; top: -3px; right: 0; width: 18px; height: 18px; padding: 0; border: 1px solid #e1b2b2; border-radius: 50%; background: #fff; color: #bd4141; line-height: 15px; cursor: pointer; }
+.remove-engine { position: absolute; top: -3px; right: 0; width: 24px; height: 24px; padding: 0; border: 1px solid #e1b2b2; border-radius: 50%; background: #fff; color: #bd4141; line-height: 21px; cursor: pointer; }
 .engine-admin-tools { position: absolute; left: 50%; bottom: 0; display: flex; gap: 3px; transform: translateX(-50%); }
-.engine-admin-tools button { width: 24px; height: 20px; padding: 0; border: 1px solid rgba(255,255,255,.55); border-radius: 4px; background: rgba(255,255,255,.9); color: #586168; cursor: pointer; }
+.engine-admin-tools button { width: 30px; height: 28px; padding: 0; border: 1px solid rgba(255,255,255,.55); border-radius: 4px; background: rgba(255,255,255,.9); color: #586168; cursor: pointer; }
 .engine-admin-tools button:hover:not(:disabled) { border-color: #26778d; color: #26778d; }
 .engine-admin-tools button:disabled { opacity: .4; cursor: default; }
 .add-engine { flex: 0 0 auto; border: 1px dashed #77af91; border-radius: 7px; background: transparent; color: var(--accent); padding: 6px 10px; cursor: pointer; }
 .field-help { margin: -7px 0 0; color: var(--muted); font-size: 12px; }
+.admin-bar button:disabled { opacity: .55; cursor: not-allowed; }
 .category-sort { display: inline-flex; gap: 4px; margin-left: 4px; }
 .category-sort button { width: 25px; height: 25px; padding: 0; border: 1px solid var(--line); border-radius: 5px; background: var(--card); color: var(--muted); cursor: pointer; }
 .category-sort button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
@@ -65,5 +66,7 @@
 .search-panel .search-box:focus-within { border-color: #81b99e; box-shadow: 0 8px 30px #28744c1a; }
 
 @media (max-width: 700px) {
-  .engine-list { justify-content: flex-start; margin-inline: -4px; }
+  .engine-list { justify-content: flex-start; margin-inline: -4px; padding-bottom: 7px; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.55) transparent; }
+  .engine-list::-webkit-scrollbar { display: block; height: 3px; }
+  .engine-list::-webkit-scrollbar-thumb { border-radius: 3px; background: rgba(255,255,255,.55); }
 }

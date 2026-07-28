@@ -123,6 +123,7 @@ body.dark .favicon { border-color: #394149; }
   .admin-mode .engine-list { display: flex; justify-content: flex-start; gap: 5px; margin: 0 0 12px; padding: 5px 2px 2px; overflow-x: auto; overflow-y: hidden; background: transparent; }
   .admin-mode .engine-wrap { width: auto; min-width: max-content; padding: 3px 9px 23px 0; }
   .admin-mode .engine { width: auto; min-width: max-content; justify-content: flex-start; padding: 7px 10px; color: #fff; overflow: hidden; }
+  .admin-mode .engine:hover, .admin-mode .engine.active { color: #555; }
   .admin-mode .engine-logo { flex: 0 0 auto; }
   .admin-mode .engine-admin-tools { bottom: 0; }
   .admin-mode .remove-engine { top: 0; right: 0; }
