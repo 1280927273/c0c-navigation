@@ -119,14 +119,14 @@ body.dark .favicon { border-color: #394149; }
   .admin-bar > button, .admin-bar > a { min-height: 36px; padding: 8px 10px; white-space: nowrap; }
   .admin-bar span { order: 3; flex: 0 0 100%; line-height: 1.35; }
   .admin-mode .topbar { display: none; }
-  .admin-mode .hero { min-height: 600px; padding-top: 62px; }
-  .admin-mode .engine-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 0 0 12px; padding: 10px; overflow: visible; border-radius: 8px; background: rgba(255, 255, 255, .9); }
-  .admin-mode .engine-wrap { width: 100%; min-width: 0; padding: 0 18px 24px 0; }
-  .admin-mode .engine { width: 100%; min-width: 0; justify-content: flex-start; padding: 7px; color: #4f5960; text-shadow: none; overflow: hidden; }
+  .admin-mode .hero { min-height: 420px; padding-top: 62px; }
+  .admin-mode .engine-list { display: flex; justify-content: flex-start; gap: 5px; margin: 0 0 12px; padding: 5px 2px 2px; overflow-x: auto; overflow-y: hidden; background: transparent; }
+  .admin-mode .engine-wrap { width: auto; min-width: max-content; padding: 3px 9px 23px 0; }
+  .admin-mode .engine { width: auto; min-width: max-content; justify-content: flex-start; padding: 7px 10px; color: #fff; overflow: hidden; }
   .admin-mode .engine-logo { flex: 0 0 auto; }
   .admin-mode .engine-admin-tools { bottom: 0; }
-  .admin-mode .remove-engine { top: -5px; right: -1px; }
-  .admin-mode .add-engine { grid-column: 1 / -1; min-height: 38px; background: rgba(255, 255, 255, .75); }
+  .admin-mode .remove-engine { top: 0; right: 0; }
+  .admin-mode .add-engine { min-width: max-content; min-height: 34px; align-self: flex-start; background: rgba(255, 255, 255, .88); }
   .admin-mode .content { margin-top: -58px; }
   .admin-mode .group h2 { height: auto; min-height: 35px; flex-wrap: wrap; }
   .admin-mode .category-sort { margin-left: auto; }

@@ -29,6 +29,8 @@
 .category-sort button { width: 25px; height: 25px; padding: 0; border: 1px solid var(--line); border-radius: 5px; background: var(--card); color: var(--muted); cursor: pointer; }
 .category-sort button:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
 .category-sort button:disabled { opacity: .35; cursor: default; }
+.category-sort .delete-category { margin-left: 3px; border-color: #e5b8b8; color: #c04444; }
+.category-sort .delete-category:hover { border-color: #c04444; background: #fff0f0; color: #a62f2f; }
 
 .engine {
   display: flex;
