@@ -33,6 +33,8 @@
 .category-sort button:disabled { opacity: .35; cursor: default; }
 .category-sort .delete-category { margin-left: 3px; border-color: #e5b8b8; color: #c04444; }
 .category-sort .delete-category:hover { border-color: #c04444; background: #fff0f0; color: #a62f2f; }
+.remove-link { position: absolute; top: 4px; right: 4px; z-index: 2; width: 18px; height: 18px; padding: 0; border: 1px solid #e1b2b2; border-radius: 50%; background: #fff; color: #bd4141; font-size: 12px; line-height: 15px; cursor: pointer; }
+.remove-link:hover { border-color: #bd4141; background: #fff0f0; }
 
 .engine {
   display: flex;
