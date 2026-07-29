@@ -89,6 +89,10 @@ async function backup(env, data) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    if (url.protocol === "http:" && url.hostname === "c.c0c.cc") {
+      url.protocol = "https:";
+      return Response.redirect(url, 308);
+    }
     if (!url.pathname.startsWith("/api/")) return secure(await env.ASSETS.fetch(request));
 
     if (url.pathname === "/api/data" && request.method === "GET") {
